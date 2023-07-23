@@ -49,3 +49,14 @@ def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """Return tuple of size two containing a start index and an end index."""
     return ((page - 1) * page_size, page * page_size)
 
+
+if __name__ == "__main__":
+    server = Server()
+
+    print(server.get_hyper(1, 2))
+    print("---")
+    print(server.get_hyper(2, 2))
+    print("---")
+    print(server.get_hyper(100, 3))
+    print("---")
+    print(server.get_hyper(3000, 100))
